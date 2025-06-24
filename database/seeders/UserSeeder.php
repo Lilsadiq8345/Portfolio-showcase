@@ -83,5 +83,14 @@ class UserSeeder extends Seeder
             'progress' => 70,
         ]);
         $project4->skills()->attach($skills->whereIn('name', ['Python', 'JavaScript', 'MongoDB'])->pluck('id'));
+
+        // Admin User
+        $admin = User::create([
+            'name' => 'Admin',
+            'email' => 'admin@admin.com',
+            'password' => Hash::make('password'),
+            'is_admin' => true,
+            'bio' => 'System administrator.',
+        ]);
     }
 }

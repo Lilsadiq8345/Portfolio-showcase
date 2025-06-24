@@ -53,6 +53,7 @@ const router = useRouter();
 const handleLogin = async () => {
   errorMessage.value = '';
   try {
+    await apiService.get('/sanctum/csrf-cookie');
     const response = await apiService.post('/login', {
       email: email.value,
       password: password.value,

@@ -47,7 +47,7 @@ const handleLogin = async () => {
 
   try {
     await apiService.get('/sanctum/csrf-cookie');
-    const response = await apiService.post('/api/login', {
+    const response = await apiService.post('/login', {
       email: email.value,
       password: password.value,
     });

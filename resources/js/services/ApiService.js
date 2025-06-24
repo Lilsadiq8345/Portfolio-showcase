@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const apiService = axios.create({
     baseURL: '/api', // Use relative URL 
+    withCredentials: true, // Ensure cookies are sent for Sanctum
     headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',

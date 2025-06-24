@@ -116,6 +116,10 @@ npm run build
 ## Admin & User Access
 
 ### **Default Admin Credentials**
+
+
+admin access url : http://127.0.0.1:8000/admin/login
+
 - **Email:** `admin@admin.com`
 - **Password:** `password`  
   *(or the password you set in your seeders or database)*
@@ -190,6 +194,7 @@ npm run build
 - `POST /api/register` – Register
 
 ### **Admin**
+
 - `GET /api/admin/users` – List users
 - `POST /api/admin/users` – Add user
 - `PUT /api/admin/users/{id}` – Edit user
